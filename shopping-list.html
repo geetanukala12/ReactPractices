@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Shopping List</title>
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone@7.8.4/babel.min.js" crossorigin></script>
+
+    <!-- Load our React component. -->
+    <script type="text/jsx">
+      const e = React.createElement;
+      class ShoppingList extends React.Component{        
+        render() { 
+            return (<div>Please select the items to add to Cart 
+              <select name="items">
+                <option value="0">First Item</option>
+                <option value="1">Second Item</option>
+                <option value="2">Third Item</option>
+                <option value="3">Fourth Item</option>
+              </select>
+            </div>);
+        }
+      }
+      
+      ReactDOM.render(
+        <ShoppingList />, document.getElementById('shopping-list')
+      );
+      </script>
+  </head>
+  <body>
+    <ShoppingList />
+    <div id="shopping-list">Content Loading..</div>
+  
+  </body>
+</html>
